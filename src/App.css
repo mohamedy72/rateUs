@@ -1,0 +1,151 @@
+:root {
+  --primary-color: hsl(25, 97%, 53%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--white);
+}
+#root {
+  background-color: var(--very-dark-blue);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* border: 1px solid; */
+  width: 25rem;
+  height: 23rem;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: var(--dark-blue);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 25rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.card.rating {
+  transform: translate(-50%, -50%);
+}
+
+.card.thankyou {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(65%, -50%);
+}
+
+.card.activeCard {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.card.NextCard {
+  opacity: 0;
+  transform: translate(-65%, -50%);
+}
+
+.icon {
+  width: max-content;
+  padding: 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.main-heading {
+  margin: 0.8rem 0;
+}
+
+.paragraph {
+  color: var(--medium-grey);
+}
+
+.rates {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.rate {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  color: var(--medium-grey);
+}
+
+.rate:hover {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+.rate.selected {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.6rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.info {
+  background: var(--very-dark-blue);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 15px;
+  margin: 1.1rem 0;
+}
+
+.icon,
+.rate {
+  background-color: #3c4352;
+  color: var(--light-grey);
+}
+
+@media screen and (min-width: 90rem) {
+}

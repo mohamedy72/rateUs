@@ -55,6 +55,7 @@ body {
   border-radius: 5px;
   width: 25rem;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  margin: 0 1rem;
 }
 
 .card.rating {
